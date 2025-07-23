@@ -1,0 +1,69 @@
+Actividad 1 de base de datos
+
+* ¿ Que es SQL?¿Para qué se útiliza?
+* ¿Para qué sirve la sentencia SELECT? Escriba su estructura básica
+* ¿Para qué sirve la clausula FROM?
+* ¿Para qué sirve la clausula WHERE?
+* Mencuone y describa brevemente al menos 4 sentencias SQL
+
+1_ SQL es un lenguaje estándar para almacenar, manipular y recuperar datos en bases de datos.
+
+2_ El SELECTLa declaración se utiliza para seleccionar datos de una base de datos.
+SELECT column1, column2, ...
+FROM table_name;
+
+3_ El FROM sirve para selecsionar la tabla.
+
+4_ El WHEREcláusula se usa para filtrar registros.
+Se utiliza para extraer sólo los registros que cumplen un afección.
+
+5_
+1 SQL Aliases :Los alias SQL se utilizan para dar una tabla, o una columna en una tabla, un nombre temporal.
+Las alizas se utilizan a menudo para hacer los nombres de las columnas más legibles.
+Sólo existe un alias durante la duración de esa consulta.
+Un alias se crea con la ASPalabra clave.
+
+La Sintaxis es :
+Cuando se utiliza alias en la columna:
+
+SELECT column_name AS alias_name
+FROM table_name;
+
+Cuando se usa alias en la tabla:
+
+SELECT column_name(s)
+FROM table_name AS alias_name;
+ 
+2 SQL RIGHT JOIN Palabra clave:
+El RIGHT JOINpalabra clave devuelve todos los registros de la tabla correcta
+(mesa 2) y la emparejados de la tabla izquierda (cuadro1). El resultado es 0 
+registros desde el lado izquierdo, si no hay coincidencia.
+
+ORIGHT JOIN Syntax
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+3 SQL FULL OUTER JOIN Keyword
+El FULL OUTER JOINpalabra clave devuelve todos los registros cuando hay un partido 
+en registros de la tabla (tabla1) o a la derecha (tabla2).
+Consejo: FULL OUTER JOINy FULL JOINson los mismos.
+
+FULL OUTER JOIN Syntax
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition; 
+
+4 La SQL INSERT INTO SELECT Statement
+El INSERT INTO SELECTde la declaración de copias de datos de un cuadro y lo inserta en otra mesa.
+El INSERT INTO SELECTdeclaración requiere que los tipos de datos en las tablas de 
+origen y las tablas de destino coinciden.
+Nota: Los registros existentes en la tabla de objetivos no se ven afectados.
+
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition; 
